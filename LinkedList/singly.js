@@ -58,6 +58,17 @@ class MySinglyLinkedList {
 
     return this;
   }
+
+  prepend(value) {
+    const newNode = new Node(value);
+
+    newNode.next = this.head;
+    this.head = newNode;
+
+    this.length++;
+
+    return this;
+  }
 }
 
 let myLinkedList = new MySinglyLinkedList(1);
