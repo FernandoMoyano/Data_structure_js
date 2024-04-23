@@ -85,6 +85,18 @@ class MySinglyLinkedList {
 
     return this;
   }
+
+  getTheIndex(index) {
+    let counter = 0;
+    let currentNode = this.head;
+
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter++;
+    }
+
+    return currentNode;
+  }
 }
 
 let myLinkedList = new MySinglyLinkedList(1);
